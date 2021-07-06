@@ -1,9 +1,10 @@
 package golang
 
 import (
-	magexTime "github.com/fizyk/magex/time"
-	"github.com/magefile/mage/sh"
 	"time"
+
+	magexTime "github.com/ClearcodeHQ/magex/time"
+	"github.com/magefile/mage/sh"
 )
 
 // Format formats go code
