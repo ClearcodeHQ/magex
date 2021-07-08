@@ -4,9 +4,11 @@ package main
 
 import (
 	// mage:import go
-	_ "github.com/ClearcodeHQ/magex/magefiles/golang"
+	_ "github.com/fizyk/magex/magefiles/golang"
 	// mage:import go:check
-	_ "github.com/ClearcodeHQ/magex/magefiles/golang/check"
+	_ "github.com/fizyk/magex/magefiles/golang/check"
+	// mage:import mage
+	_ "github.com/fizyk/magex/magefiles/mage"
 	// mage:import adr
 	_ "github.com/ClearcodeHQ/magex/magefiles/adr"
 )
