@@ -17,9 +17,9 @@ const DOCKER_EXEC = ("docker run --rm -u {{.UID}}:{{.GID}} -v {{.AdrDir}}:/doc "
 	"brianskarda/adr-tools-docker adr {{.Cmd}}")
 
 const (
-	adrDirDefault       = "documentation/adr/"
+	adrDirDefault       = "documentation/"
 	adrConfigDirDefault = ".adr-config/"
-	adrTemplateDefault  = "template.rst"
+	adrTemplateDefault  = "template.md"
 )
 
 type params struct {
@@ -64,13 +64,13 @@ func buildParams(ctx context.Context, cmd, title string) (*params, error) {
 	}, nil
 }
 
-func buildCommand(ctx context.Context, cmd, path string) ([]string, error) {
+func buildCommand(ctx context.Context, cmd, title string) ([]string, error) {
 	tmpl, err := template.New("RUN_ADR").Parse(DOCKER_EXEC)
 	if err != nil {
 		return []string{}, err
 	}
 
-	params, err := buildParams(ctx, "init", path)
+	params, err := buildParams(ctx, cmd, title)
 	if err != nil {
 		return []string{}, err
 	}
