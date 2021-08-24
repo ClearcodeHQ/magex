@@ -1,0 +1,24 @@
+name: Go test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  commands:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.16
+
+      - name: Check adr:new
+        uses: magefile/mage-action@v1
+        with:
+          version: latest
+          args: adr:new We pledge to run tests
