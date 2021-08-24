@@ -27,7 +27,6 @@ type params struct {
 
 func buildParams(cmd, title, adrDir, adrConfigDir, adrTemplate string) (*params, error) {
 
-	cmd = fmt.Sprintf("%s %s", cmd, title)
 	usr, err := user.Current()
 	if err != nil {
 		return nil, err
@@ -48,7 +47,7 @@ func buildParams(cmd, title, adrDir, adrConfigDir, adrTemplate string) (*params,
 	}
 
 	return &params{
-		Cmd:          cmd,
+		Cmd:          fmt.Sprintf("%s %s", cmd, title),
 		AdrDir:       fmt.Sprintf("%s/%s", pwd, adrDir),
 		AdrConfigDir: fmt.Sprintf("%s/%s", pwd, adrConfigDir),
 		AdrTemplate:  adrTemplate,
