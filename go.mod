@@ -1,6 +1,6 @@
 module github.com/ClearcodeHQ/magex
 
-go 1.16
+go 1.17
 
 require (
 	github.com/VividCortex/ewma v1.2.0 // indirect
@@ -12,4 +12,12 @@ require (
 	github.com/mattn/go-runewidth v0.0.13 // indirect
 	golang.org/x/crypto v0.0.0-20210711020723-a769d52b0f97 // indirect
 	golang.org/x/sys v0.0.0-20210809222454-d867a43fc93e // indirect
+)
+
+require (
+	github.com/cheggaaa/pb/v3 v3.0.8 // indirect
+	github.com/google/go-github/v35 v35.3.0 // indirect
+	github.com/hashicorp/go-version v1.3.0 // indirect
+	github.com/mattn/go-colorable v0.1.8 // indirect
+	github.com/rivo/uniseg v0.2.0 // indirect
 )

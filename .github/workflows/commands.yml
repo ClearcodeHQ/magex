@@ -1,4 +1,4 @@
-name: Go lint and format
+name: Go test
 
 on:
   push:
@@ -8,18 +8,21 @@ on:
 
 jobs:
 
-  check_format:
+  commands:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       - name: Set up Go
         uses: actions/setup-go@v2
         with:
           go-version: 1.17
 
-      - name: Run with Mage
+      - name: prepare
+        run: |
+          mkdir documentation
+
+      - name: Check adr:new
         uses: magefile/mage-action@v1
         with:
           version: latest
-          args: go:check:format
+          args: adr:new "We pledge to run tests"
