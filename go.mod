@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/VividCortex/ewma v1.2.0 // indirect
 	github.com/fatih/color v1.12.0 // indirect
-	github.com/fizyk/magex v0.1.4
+	github.com/fizyk/magex v0.1.5
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/magefile/mage v1.11.0
 	github.com/mattn/go-isatty v0.0.13 // indirect
