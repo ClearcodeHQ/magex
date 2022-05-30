@@ -22,7 +22,7 @@ jobs:
           mkdir documentation
 
       - name: Check adr:new
-        uses: magefile/mage-action@v1
+        uses: magefile/mage-action@v2
         with:
           version: latest
           args: adr:new "We pledge to run tests"
